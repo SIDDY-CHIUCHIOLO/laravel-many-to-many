@@ -53647,6 +53647,19 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
+}); //** delete single item car in db*/
+
+var deleteForms = document.querySelectorAll('.delete');
+deleteForms.forEach(function (singleForm) {
+  singleForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // § blocchiamo l'invio del form
+
+    userConfirmation = window.confirm("Sei sicuro di voler eliminare ".concat(this.getAttribute('post-model'), "?"));
+
+    if (userConfirmation) {
+      this.submit();
+    }
+  });
 });
 
 /***/ }),
