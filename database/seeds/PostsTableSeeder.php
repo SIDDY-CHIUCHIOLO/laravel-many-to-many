@@ -20,7 +20,7 @@ class PostsTableSeeder extends Seeder
             $newPost->author = $faker->name();
             $newPost->content = $faker->paragraph(7, true);
             $newPost->image_url = "https://picsum.photos/id/$i/450/600";
-            $newPost->slug = Str::slug($newPost->title, '-');
+            $newPost->slug = Str::slug($newPost->title, '-' ) . "-$i";
             $newPost->save();
         }
     }

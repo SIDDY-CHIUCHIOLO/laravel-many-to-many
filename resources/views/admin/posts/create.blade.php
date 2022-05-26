@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Crea nuovo fumetto</h1>
+    <h1 class="texyt">Crea nuovo fumetto</h1>
     <form action="{{route('admin.posts.store')}}" method="POST">
         @csrf
     
